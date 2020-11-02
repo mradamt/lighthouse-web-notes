@@ -25,3 +25,37 @@
 6. Arrow functions don't have their own `this`. This is useful! Say you have a method that calls `array.forEach(function())`, without arrow functions we couldn't include `this` in our `forEach()` call! See [this example](https://javascript.info/arrow-functions#arrow-functions-have-no-this).
 7. 
 
+## PAPER NOTES
+1. `if (condition) {take this action}`
+  1. Ternery: `boolean test ? action if true : action if false`
+2. Falsy values:
+  * false
+  * 0
+  * null
+  * "" empty string
+  * undefined
+  * NaN
+3. Arrow functions (see notes above about 'this' with arrow funcs):
+  1. `const variable = (a, b) => {return something using a and b}`
+  1. `const variable = () => {return something}`
+  1. `const variable = a => {return something using a}`
+  1. `const variable = a => something using a`
+4. Switch statements:
+  ```switch (condition) {
+    case 'thisCase':
+      doSomething;
+      break;
+    case 'anotherCase':
+      doSomethingElse;
+      break;
+    default:
+      doDefaultIfNoOtherCasesMatch;
+  }
+5. Default parameters
+  1. `function name(x = 'someDefaultValue') {return something using x; the default value will be used if no x is provided as an argument}`
+    * `name(a) --> does things to 'a'`
+    * `name() --> does things to 'someDefaultValue'`
+6. Block scope: the code within {}
+  * Best practice is to avoid the global namespace
+  * Also best practice to avoid reusing variable names
+7. `for...in` vs `for...of` ---> `for PROPERTY in object` :::: `for ELEMENT of array`
